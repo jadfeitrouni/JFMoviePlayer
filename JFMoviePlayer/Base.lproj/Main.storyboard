@@ -1,25 +1,175 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4tb-9q-WZ3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--JFMoviePlayer-->
+        <scene sceneID="By5-YM-y2Q">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController title="JFMoviePlayer" id="oqM-kx-RuJ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="aMG-6K-4uL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="GEq-WA-ad1">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7Qm-1o-nrQ">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Qm-1o-nrQ" id="Gsg-Pd-e2o">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Local video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQi-4g-uQv">
+                                                    <rect key="frame" x="8" y="11" width="88" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ahu-4X-yE8" kind="show" id="1bM-gA-3SR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XYr-hG-trl">
+                                        <rect key="frame" x="0.0" y="108" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XYr-hG-trl" id="xVy-cw-xqa">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Online Video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fj-07-HDO">
+                                                    <rect key="frame" x="8" y="11" width="177" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="PVq-F4-nIE" kind="show" id="gV6-9e-350"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6uP-8C-8xs">
+                                        <rect key="frame" x="0.0" y="152" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6uP-8C-8xs" id="1PR-Fo-GwE">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inside a UITable View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF9-Dk-6mp">
+                                                    <rect key="frame" x="8" y="11" width="163" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="oqM-kx-RuJ" id="6Pp-47-RqR"/>
+                            <outlet property="delegate" destination="oqM-kx-RuJ" id="a2Q-Kk-z4v"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="JFMoviePlayer" id="Ifl-ML-chj"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WO1-ey-KhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="343" y="818"/>
+        </scene>
+        <!--Single Local View Controller-->
+        <scene sceneID="zmr-4r-tcO">
+            <objects>
+                <viewController id="Ahu-4X-yE8" customClass="SingleLocalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MKI-Ez-oSB"/>
+                        <viewControllerLayoutGuide type="bottom" id="dMh-ZP-9Vw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qFh-Jk-3mr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="hED-T0-NxK">
+                                <rect key="frame" x="20" y="72" width="560" height="315"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hED-T0-NxK" secondAttribute="height" multiplier="16:9" id="Nny-Pe-3F0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hED-T0-NxK" firstAttribute="top" secondItem="MKI-Ez-oSB" secondAttribute="bottom" constant="8" id="EbH-jU-8Zx"/>
+                            <constraint firstItem="hED-T0-NxK" firstAttribute="left" secondItem="qFh-Jk-3mr" secondAttribute="left" constant="20" id="het-47-XPr"/>
+                            <constraint firstAttribute="right" secondItem="hED-T0-NxK" secondAttribute="right" constant="20" id="li0-Pq-G6l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="hED-T0-NxK" id="ZTD-Mh-GXP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uKf-c1-CJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050" y="818"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7kx-fO-oiU">
+            <objects>
+                <navigationController id="4tb-9q-WZ3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pwW-2d-eS7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oqM-kx-RuJ" kind="relationship" relationship="rootViewController" id="OVk-sP-6J6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2c-td-9CB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-477" y="818"/>
+        </scene>
+        <!--Single Online View Controller-->
+        <scene sceneID="xOw-lR-ux7">
+            <objects>
+                <viewController id="PVq-F4-nIE" customClass="SingleOnlineViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M5d-ur-F3E"/>
+                        <viewControllerLayoutGuide type="bottom" id="7IN-ZL-2Pm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rRL-e8-rpV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="h6J-62-emG">
+                                <rect key="frame" x="20" y="72" width="560" height="315"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h6J-62-emG" secondAttribute="height" multiplier="16:9" id="hTB-aF-e32"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h6J-62-emG" firstAttribute="top" secondItem="M5d-ur-F3E" secondAttribute="bottom" constant="8" id="9ma-Of-zv3"/>
+                            <constraint firstItem="h6J-62-emG" firstAttribute="left" secondItem="rRL-e8-rpV" secondAttribute="left" constant="20" id="Mh6-Tf-tCz"/>
+                            <constraint firstAttribute="right" secondItem="h6J-62-emG" secondAttribute="right" constant="20" id="cYM-KY-524"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="h6J-62-emG" id="TNA-ca-bR5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQV-zx-u6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343" y="1544"/>
         </scene>
     </scenes>
 </document>

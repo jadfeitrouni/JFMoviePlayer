@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviePlayerController">
+            <connections>
+                <outlet property="loader" destination="GZT-q4-GMD" id="GyM-w5-fbP"/>
+                <outlet property="loading" destination="a8G-9g-EMk" id="Lsx-TJ-T2L"/>
+                <outlet property="playButton" destination="y8e-wU-KfS" id="vzk-1h-hRH"/>
+                <outlet property="thumbnail" destination="BxF-8b-7m1" id="q0x-vU-1rQ"/>
+                <outlet property="videoContainer" destination="IOZ-H8-nol" id="5Xe-Kk-NIW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="169"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOZ-H8-nol">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="169"/>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-9g-EMk">
+                    <rect key="frame" x="132" y="66" width="37" height="37"/>
+                </activityIndicatorView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BxF-8b-7m1">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="169"/>
+                </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="GZT-q4-GMD">
+                    <rect key="frame" x="132" y="66" width="37" height="37"/>
+                    <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8e-wU-KfS">
+                    <rect key="frame" x="127" y="62" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="QNB-Wi-GBg"/>
+                        <constraint firstAttribute="width" constant="46" id="cd7-Jc-SmB"/>
+                    </constraints>
+                    <state key="normal" image="play-button.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="playAction:" destination="-1" eventType="touchUpInside" id="Z1W-At-Azc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="BxF-8b-7m1" secondAttribute="bottom" id="37d-Ye-SLn"/>
+                <constraint firstAttribute="centerX" secondItem="a8G-9g-EMk" secondAttribute="centerX" id="429-JJ-jqF"/>
+                <constraint firstAttribute="trailing" secondItem="BxF-8b-7m1" secondAttribute="trailing" id="B0q-OZ-qef"/>
+                <constraint firstAttribute="centerY" secondItem="a8G-9g-EMk" secondAttribute="centerY" id="Fhd-6R-WOP"/>
+                <constraint firstItem="GZT-q4-GMD" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ihx-aD-4P7"/>
+                <constraint firstItem="IOZ-H8-nol" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ovk-z6-SW2"/>
+                <constraint firstAttribute="bottom" secondItem="IOZ-H8-nol" secondAttribute="bottom" id="RAp-jm-3fo"/>
+                <constraint firstAttribute="trailing" secondItem="IOZ-H8-nol" secondAttribute="trailing" id="Rnf-bM-QRl"/>
+                <constraint firstItem="GZT-q4-GMD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SBb-nn-LW3"/>
+                <constraint firstItem="BxF-8b-7m1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XWB-XZ-ka2"/>
+                <constraint firstAttribute="centerX" secondItem="y8e-wU-KfS" secondAttribute="centerX" id="aGV-Rr-fXr"/>
+                <constraint firstItem="BxF-8b-7m1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dSo-PD-KcL"/>
+                <constraint firstItem="IOZ-H8-nol" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eNy-CV-87z"/>
+                <constraint firstAttribute="centerY" secondItem="y8e-wU-KfS" secondAttribute="centerY" id="s1y-rd-RAe"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play-button.png" width="144" height="144"/>
+    </resources>
+</document>
